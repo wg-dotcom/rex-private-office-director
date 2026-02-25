@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Office Director | Candidate Selection for Rex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rex-red: #C41C1C;
+            --rex-red-soft: #E53E3E;
+            --rex-red-deep: #991B1B;
+            --rex-dark: #1C1C1C;
+            --rex-darker: #141414;
+            --rex-darkest: #0D0D0D;
+            --rex-white: #FFFFFF;
+            --rex-light: #F7F6F4;
+            --rex-gray: #6B7280;
+            --rex-gray-light: #E5E7EB;
+            --rex-cream: #FDF8F0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--rex-darkest);
+            background: var(--rex-white);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            background: var(--rex-darker);
+            color: var(--rex-white);
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-top-bar {
+            background: var(--rex-red);
+            height: 4px;
+            width: 100%;
+        }
+
+        .hero-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 40px 72px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 50px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-brand .logo-text {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: var(--rex-white);
+            text-transform: uppercase;
+        }
+
+        .hero-brand .logo-accent {
+            width: 36px;
+            height: 3px;
+            background: var(--rex-red);
+            border-radius: 2px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(196, 28, 28, 0.12);
+            border: 1px solid rgba(196, 28, 28, 0.35);
+            color: var(--rex-red-soft);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.15s forwards;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.3s forwards;
+        }
+
+        .hero h1 strong { font-weight: 700; }
+
+        .hero-subtitle {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 660px;
+            line-height: 1.75;
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.45s forwards;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            opacity: 0;
+            animation: fadeUp 0.8s ease 0.6s forwards;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hero-meta-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--rex-red-soft);
+        }
+
+        .hero-meta-value {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ===== EDITORIAL ===== */
+        .editorial {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        .editorial-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--rex-red-deep);
+            margin-bottom: 20px;
+        }
+
+        .editorial h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 28px;
+            color: var(--rex-darkest);
+        }
+
+        .editorial p {
+            font-size: 16px;
+            line-height: 1.85;
+            color: var(--rex-gray);
+            margin-bottom: 20px;
+        }
+
+        .editorial p strong {
+            color: var(--rex-darkest);
+            font-weight: 600;
+        }
+
+        .editorial-divider {
+            width: 48px;
+            height: 3px;
+            background: var(--rex-red);
+            border-radius: 2px;
+            margin: 48px 0;
+        }
+
+        /* ===== CANDIDATE CARDS ===== */
+        .candidates-section {
+            background: var(--rex-light);
+            padding: 80px 0;
+        }
+
+        .candidates-header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+            margin-bottom: 56px;
+        }
+
+        .candidates-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .candidates-header p {
+            font-size: 16px;
+            color: var(--rex-gray);
+        }
+
+        .candidate-card {
+            max-width: 1100px;
+            margin: 0 auto 40px;
+            padding: 0 40px;
+        }
+
+        .card {
+            background: var(--rex-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 12px 48px rgba(0,0,0,0.1);
+        }
+
+        .card-top {
+            background: var(--rex-darker);
+            padding: 36px 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .card-identity {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .card-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--rex-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--rex-white);
+            flex-shrink: 0;
+        }
+
+        .card-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--rex-white);
+            margin-bottom: 4px;
+        }
+
+        .card-location {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-rate {
+            text-align: right;
+        }
+
+        .card-rate-amount {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--rex-red-soft);
+        }
+
+        .card-rate-period {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-body { padding: 40px 44px; }
+
+        .card-narrative {
+            font-size: 16px;
+            line-height: 1.85;
+            color: var(--rex-gray);
+            margin-bottom: 32px;
+            font-style: italic;
+            border-left: 3px solid var(--rex-red);
+            padding-left: 20px;
+        }
+
+        .card-narrative strong {
+            color: var(--rex-darkest);
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .card-section-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--rex-darkest);
+            margin-bottom: 16px;
+            margin-top: 32px;
+        }
+
+        .card-section-title:first-of-type { margin-top: 0; }
+
+        /* Experience */
+        .experience-list { display: flex; flex-direction: column; gap: 20px; }
+
+        .exp-item { display: flex; gap: 16px; align-items: flex-start; }
+
+        .exp-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 6px; }
+
+        .exp-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--rex-red); flex-shrink: 0; }
+
+        .exp-line { width: 2px; flex: 1; background: var(--rex-gray-light); margin-top: 6px; }
+
+        .exp-content { flex: 1; padding-bottom: 4px; }
+
+        .exp-role { font-size: 15px; font-weight: 600; color: var(--rex-darkest); }
+
+        .exp-company { font-size: 14px; color: var(--rex-gray); }
+
+        .exp-date { font-size: 12px; color: rgba(107, 114, 128, 0.7); margin-top: 2px; }
+
+        .exp-highlight { font-size: 13px; color: #0D7A6B; font-weight: 500; margin-top: 4px; }
+
+        /* Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .tag {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 500;
+            background: var(--rex-light);
+            color: var(--rex-darkest);
+            border: 1px solid var(--rex-gray-light);
+        }
+
+        .tag.key {
+            background: rgba(196, 28, 28, 0.08);
+            border-color: rgba(196, 28, 28, 0.25);
+            color: var(--rex-red-deep);
+            font-weight: 600;
+        }
+
+        .tag.dark {
+            background: var(--rex-darker);
+            border-color: var(--rex-darker);
+            color: var(--rex-white);
+        }
+
+        /* Fit Grid */
+        .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+
+        .fit-item { background: var(--rex-light); border-radius: 10px; padding: 16px; text-align: center; }
+
+        .fit-label { font-size: 11px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--rex-gray); margin-bottom: 4px; }
+
+        .fit-value { font-size: 14px; font-weight: 600; color: var(--rex-darkest); }
+
+        /* Strength Bars */
+        .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+
+        .strength-item { display: flex; flex-direction: column; gap: 6px; }
+
+        .strength-label { font-size: 13px; font-weight: 500; color: var(--rex-darkest); }
+
+        .strength-bar-bg { height: 6px; background: var(--rex-light); border-radius: 3px; overflow: hidden; }
+
+        .strength-bar {
+            height: 100%;
+            border-radius: 3px;
+            background: linear-gradient(90deg, var(--rex-red-deep), var(--rex-red-soft));
+            transition: width 1.5s ease;
+        }
+
+        /* ===== COMPARISON ===== */
+        .why-section { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
+
+        .why-section h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 28px; }
+
+        .why-section p { font-size: 16px; line-height: 1.8; color: var(--rex-gray); margin-bottom: 20px; }
+
+        .why-section p strong { color: var(--rex-darkest); font-weight: 600; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 13px; }
+
+        .comparison-table thead th {
+            background: var(--rex-darker);
+            color: var(--rex-white);
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .comparison-table thead th:first-child { border-radius: 8px 0 0 0; }
+        .comparison-table thead th:last-child { border-radius: 0 8px 0 0; }
+
+        .comparison-table tbody td { padding: 12px; border-bottom: 1px solid var(--rex-gray-light); color: var(--rex-darkest); }
+
+        .comparison-table tbody tr:last-child td { border-bottom: none; }
+
+        .comparison-table tbody tr:nth-child(even) { background: var(--rex-light); }
+
+        .check { color: #059669; font-weight: 700; }
+
+        /* ===== RECRUITING TEAM ===== */
+        .team-section { background: var(--rex-light); padding: 80px 0; }
+
+        .team-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+
+        .team-section h2 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; color: var(--rex-darkest); }
+
+        .team-section .team-subtitle { font-size: 16px; color: var(--rex-gray); max-width: 640px; line-height: 1.7; margin-bottom: 48px; }
+
+        .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; max-width: 640px; margin-bottom: 56px; }
+
+        .team-card {
+            background: var(--rex-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .team-card:hover { transform: translateY(-3px); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 12px 48px rgba(0,0,0,0.1); }
+
+        .team-card-top { background: var(--rex-darker); padding: 36px 24px 0; display: flex; flex-direction: column; align-items: center; }
+
+        .team-photo {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--rex-red);
+            margin-bottom: -48px;
+            position: relative;
+            z-index: 2;
+            background: var(--rex-darker);
+        }
+
+        .team-photo-initials {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            border: 3px solid var(--rex-red);
+            margin-bottom: -48px;
+            position: relative;
+            z-index: 2;
+            background: var(--rex-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--rex-white);
+        }
+
+        .team-card-body { padding: 60px 24px 32px; }
+
+        .team-name { font-size: 18px; font-weight: 700; color: var(--rex-darkest); margin-bottom: 4px; }
+
+        .team-role { font-size: 12px; font-weight: 600; color: var(--rex-red-deep); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 8px; }
+
+        .team-location { font-size: 13px; color: var(--rex-gray); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+
+        .team-bio { font-size: 14px; line-height: 1.7; color: var(--rex-gray); }
+
+        .team-email { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 500; color: var(--rex-red-deep); text-decoration: none; transition: color 0.2s ease; }
+
+        .team-email:hover { color: var(--rex-red); }
+
+        /* Sagan Info */
+        .sagan-info {
+            background: var(--rex-white);
+            border-radius: 16px;
+            padding: 36px 40px;
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 32px rgba(0,0,0,0.06);
+        }
+
+        .sagan-logo-mark {
+            flex-shrink: 0;
+            width: 72px;
+            height: 72px;
+            background: var(--rex-darker);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--rex-white);
+            letter-spacing: -0.5px;
+        }
+
+        .sagan-text h3 { font-size: 18px; font-weight: 700; color: var(--rex-darkest); margin-bottom: 8px; }
+
+        .sagan-text p { font-size: 14px; line-height: 1.7; color: var(--rex-gray); margin: 0; }
+
+        .sagan-text p strong { color: var(--rex-darkest); font-weight: 600; }
+
+        .sagan-stats { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; }
+
+        .sagan-stat { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--rex-gray); }
+
+        .sagan-stat strong { color: var(--rex-red-deep); font-weight: 700; }
+
+        /* ===== FOOTER ===== */
+        .footer-cta { background: var(--rex-darker); color: var(--rex-white); text-align: center; padding: 72px 40px; }
+
+        .footer-cta h2 { font-size: 28px; font-weight: 300; margin-bottom: 12px; letter-spacing: -0.5px; }
+
+        .footer-cta h2 strong { font-weight: 700; }
+
+        .footer-cta p { font-size: 15px; color: rgba(255, 255, 255, 0.45); margin-bottom: 36px; }
+
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--rex-red);
+            color: var(--rex-white);
+            padding: 14px 32px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-contact:hover { background: var(--rex-red-soft); transform: translateY(-1px); }
+
+        .footer-bottom {
+            margin-top: 56px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-logo { font-size: 20px; font-weight: 800; color: rgba(255,255,255,0.3); }
+
+        .footer-note { font-size: 12px; color: rgba(255,255,255,0.2); }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 30px; }
+            .hero-inner { padding: 40px 24px 50px; }
+            .hero-meta { flex-direction: column; gap: 20px; }
+            .card-top { flex-direction: column; gap: 16px; padding: 28px 24px; }
+            .card-rate { text-align: left; }
+            .card-body { padding: 28px 24px; }
+            .fit-grid { grid-template-columns: 1fr; }
+            .strength-grid { grid-template-columns: 1fr; }
+            .editorial, .why-section { padding: 56px 24px; }
+            .candidates-header, .candidate-card { padding: 0 24px; }
+            .team-grid { grid-template-columns: 1fr; max-width: 100%; }
+            .sagan-info { flex-direction: column; text-align: center; padding: 28px 24px; }
+            .sagan-stats { justify-content: center; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-top-bar"></div>
+        <div class="hero-inner">
+            <div class="hero-brand">
+                <div>
+                    <span class="logo-text">Rex</span>
+                    <div class="logo-accent"></div>
+                </div>
+            </div>
+            <div class="hero-badge">White Glove Talent Selection</div>
+            <h1>Your <strong>Private Office Director.</strong><br>Carefully Selected.</h1>
+            <p class="hero-subtitle">
+                The person in this seat handles everything so Peter can focus on what only he can do. Professional and family life. Bilingual, discreet, high-motor. Here are the five we'd put in the room.
+            </p>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Role</span>
+                    <span class="hero-meta-value">Private Office Director</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Engagement</span>
+                    <span class="hero-meta-value">Full-Time Only</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Hours</span>
+                    <span class="hero-meta-value">EST 8am &ndash; 5pm</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Compensation</span>
+                    <span class="hero-meta-value">$4,000 &ndash; $5,000 / month</span>
+                </div>
+                <div class="hero-meta-item">
+                    <span class="hero-meta-label">Candidates Presented</span>
+                    <span class="hero-meta-value">5 Vetted Profiles</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDITORIAL ===== -->
+    <section class="editorial fade-in">
+        <div class="editorial-label">Our Selection Rationale</div>
+        <h2>Not an Assistant. The Person Who Keeps Everything Moving.</h2>
+        <p>
+            Rex isn't looking for someone who takes orders and follows up on tasks. Peter needs <strong>someone who thinks three steps ahead</strong>, who doesn't wait to be asked, and who can hold the complexity of a fast-moving private office without missing a beat. Discretion isn't a bullet point in the job description. It's the entire foundation.
+        </p>
+        <p>
+            So we filtered hard. We started by eliminating anyone with more than three employers in the last twelve years. No consultants. No freelancers. No one who needed a clear playbook handed to them. We were looking for <strong>candidates who've operated in high-trust, high-stakes environments</strong> — supporting C-suite principals, managing sensitive correspondence, running calendars that affect entire organizations.
+        </p>
+        <p>
+            Then we layered in the specifics: <strong>bilingual Spanish and English at professional fluency</strong>, US Visa confirmed, LATAM preferred, full EST time zone alignment, and a demonstrated ability to support someone's personal and professional life simultaneously without losing composure or confidentiality. We screened for career backgrounds rooted in consulting, finance, legal, and executive support at the principal level.
+        </p>
+        <div class="editorial-divider"></div>
+        <p style="font-size: 14px; color: var(--rex-gray);">
+            <strong style="color: var(--rex-darkest);">What we looked for in every conversation:</strong> These aren't people who describe their past roles as managing a process. They describe owning outcomes. They talk about what broke and how they fixed it before anyone noticed. They've sat in the room where real decisions happen, and they know how to be <strong>invisible when that's what's needed, and indispensable every day.</strong>
+        </p>
+    </section>
+
+    <!-- ===== CANDIDATES ===== -->
+    <section class="candidates-section">
+        <div class="candidates-header fade-in">
+            <h2>The Selection</h2>
+            <p>Five candidates. All vetted against what Peter's private office actually demands.</p>
+        </div>
+
+        <!-- CANDIDATE 1: Marcela C. ★ Top Pick -->
+        <div class="candidate-card fade-in">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-identity">
+                        <div class="card-avatar">MC</div>
+                        <div>
+                            <div class="card-name">Marcela C. <span style="color: var(--rex-red-soft); font-size: 13px; font-weight: 600;">&star; Top Recommendation</span></div>
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Argentina &middot; Remote &middot; Native Spanish &middot; Bilingual English
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-rate">
+                        <div class="card-rate-amount">$3,000</div>
+                        <div class="card-rate-period">USD / Month</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-narrative">
+                        Marcela is the <strong>best profile on this list, and it isn't close</strong>. She's supported C-suite executives at WeWork, ThirdLove, and Upwork — brands that operate at pace, under pressure, and at scale. That track record isn't just EA experience. It's executive-level calendar management, cross-functional coordination, and personal logistics support for founders and senior leaders who don't have time to repeat themselves. <strong>LATAM-based, bilingual, and with the kind of career stability that signals real trust</strong>. She's been in roles where the bar is high and the tolerance for dropped balls is zero. Exactly the profile this seat demands.
+                    </div>
+
+                    <div class="card-section-title">Experience</div>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Executive Assistant to C-Suite</div>
+                                <div class="exp-company">WeWork &middot; Real Estate Technology</div>
+                                <div class="exp-date">2019 &ndash; 2022</div>
+                                <div class="exp-highlight">C-suite support &middot; Global calendar coordination &middot; Board-level correspondence</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Senior Executive Assistant</div>
+                                <div class="exp-company">ThirdLove &middot; Consumer Brands</div>
+                                <div class="exp-date">2017 &ndash; 2019</div>
+                                <div class="exp-highlight">Founder support &middot; Travel logistics &middot; Personal and professional calendar</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Operations Executive Assistant</div>
+                                <div class="exp-company">Upwork &middot; Technology Platform</div>
+                                <div class="exp-date">2014 &ndash; 2017</div>
+                                <div class="exp-highlight">Executive operations &middot; Confidential correspondence &middot; Office management</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Core Competencies</div>
+                    <div class="tags">
+                        <span class="tag dark">C-Suite EA</span>
+                        <span class="tag dark">Bilingual Spanish / English</span>
+                        <span class="tag dark">LATAM-Based</span>
+                        <span class="tag key">Founder-Level Support</span>
+                        <span class="tag key">Household &amp; Family Logistics</span>
+                        <span class="tag">Calendar Management</span>
+                        <span class="tag">Travel Coordination</span>
+                        <span class="tag">Board Communications</span>
+                        <span class="tag">Confidential Operations</span>
+                    </div>
+
+                    <div class="card-section-title">Rex Fit Indicators</div>
+                    <div class="fit-grid">
+                        <div class="fit-item">
+                            <div class="fit-label">Principal Experience</div>
+                            <div class="fit-value">Founder & C-Suite, 3 Major Companies</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Career Stability</div>
+                            <div class="fit-value">3 Roles in 10+ Years</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Target Profile Match</div>
+                            <div class="fit-value">LATAM Female, Bilingual, EST</div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Strength Profile</div>
+                    <div class="strength-grid">
+                        <div class="strength-item">
+                            <span class="strength-label">Executive-Level Discretion</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 97%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Proactive Anticipation</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Bilingual Communication</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">High-Pace Environment Fit</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CANDIDATE 2: Aaliyah H. ★ Strong Match -->
+        <div class="candidate-card fade-in">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-identity">
+                        <div class="card-avatar">AH</div>
+                        <div>
+                            <div class="card-name">Aaliyah H. <span style="color: var(--rex-red-soft); font-size: 13px; font-weight: 600;">&star; Strong Match</span></div>
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Jamaica &middot; Remote &middot; Native English &middot; Professional Spanish
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-rate">
+                        <div class="card-rate-amount">$2,500</div>
+                        <div class="card-rate-period">USD / Month</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-narrative">
+                        Eleven years of <strong>direct CEO support</strong>. That's not a career path that produces generalists. That's a career that produces someone who can read a principal's preferences, manage their time and energy, handle the sensitive, and stay invisible while doing it. Aaliyah has spent over a decade in environments where the CEO's time is the most valuable resource in the building. <strong>She knows what it costs when something gets dropped, and she doesn't drop things.</strong> Native English, with Spanish at a professional level, and full EST overlap. At $2,500/month, she's exceptional value for this level of experience.
+                    </div>
+
+                    <div class="card-section-title">Experience</div>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Executive Assistant to CEO</div>
+                                <div class="exp-company">Multiple Organizations &middot; Various Industries</div>
+                                <div class="exp-date">2015 &ndash; Present</div>
+                                <div class="exp-highlight">CEO-level support &middot; Board prep &middot; Inbox and calendar management for C-suite</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Senior Administrative Officer</div>
+                                <div class="exp-company">Earlier Roles &middot; Operations</div>
+                                <div class="exp-date">2013 &ndash; 2015</div>
+                                <div class="exp-highlight">Office operations &middot; Executive scheduling &middot; Stakeholder communications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Core Competencies</div>
+                    <div class="tags">
+                        <span class="tag dark">11 Years CEO Support</span>
+                        <span class="tag dark">EST Full Overlap</span>
+                        <span class="tag key">Principal-Level Operations</span>
+                        <span class="tag key">High-Trust Environment</span>
+                        <span class="tag">Inbox Management</span>
+                        <span class="tag">Board Meeting Prep</span>
+                        <span class="tag">Travel &amp; Logistics</span>
+                        <span class="tag">Stakeholder Communications</span>
+                    </div>
+
+                    <div class="card-section-title">Rex Fit Indicators</div>
+                    <div class="fit-grid">
+                        <div class="fit-item">
+                            <div class="fit-label">Principal Tenure</div>
+                            <div class="fit-value">11 Years CEO Support</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Time Zone</div>
+                            <div class="fit-value">Jamaica — Full EST</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Trust Level</div>
+                            <div class="fit-value">Board-Level Confidentiality</div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Strength Profile</div>
+                    <div class="strength-grid">
+                        <div class="strength-item">
+                            <span class="strength-label">CEO-Level Support Depth</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Reliability Under Pressure</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Communication Management</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 92%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Organizational Systems</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CANDIDATE 3: Michelle F. -->
+        <div class="candidate-card fade-in">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-identity">
+                        <div class="card-avatar">MF</div>
+                        <div>
+                            <div class="card-name">Michelle F.</div>
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Panama &middot; Remote &middot; Bilingual Spanish / English
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-rate">
+                        <div class="card-rate-amount">$2,500</div>
+                        <div class="card-rate-period">USD / Month</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-narrative">
+                        Twenty years of international executive support. Michelle has operated across <strong>multiple countries, multiple time zones, and multiple principals</strong>. She's managed the complexity of international offices, handled personal and professional logistics simultaneously, and done it at the level of seniority that means she's trusted with things that don't go on the calendar. <strong>Bilingual from birth, LATAM-based, and with a level of polish</strong> that comes from two decades in environments where the margin for error is zero. Her international background is directly relevant — Peter's world doesn't stop at the US border either.
+                    </div>
+
+                    <div class="card-section-title">Experience</div>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">International Executive Assistant</div>
+                                <div class="exp-company">Multinational Firms &middot; Various Industries</div>
+                                <div class="exp-date">2010 &ndash; Present</div>
+                                <div class="exp-highlight">Cross-border logistics &middot; Principal-level support &middot; International stakeholder coordination</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Senior Executive Secretary</div>
+                                <div class="exp-company">International Organizations &middot; Panama</div>
+                                <div class="exp-date">2004 &ndash; 2010</div>
+                                <div class="exp-highlight">Executive operations &middot; Bilingual correspondence &middot; Event and travel management</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Core Competencies</div>
+                    <div class="tags">
+                        <span class="tag dark">20+ Years International EA</span>
+                        <span class="tag dark">Bilingual Spanish / English</span>
+                        <span class="tag dark">LATAM Female</span>
+                        <span class="tag key">Multi-Country Operations</span>
+                        <span class="tag key">Personal &amp; Professional Support</span>
+                        <span class="tag">International Travel</span>
+                        <span class="tag">Stakeholder Relations</span>
+                        <span class="tag">Executive Correspondence</span>
+                    </div>
+
+                    <div class="card-section-title">Rex Fit Indicators</div>
+                    <div class="fit-grid">
+                        <div class="fit-item">
+                            <div class="fit-label">International Experience</div>
+                            <div class="fit-value">20+ Years, Multi-Country</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Target Profile</div>
+                            <div class="fit-value">LATAM Female, Bilingual</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Dual Support</div>
+                            <div class="fit-value">Personal + Professional Both</div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Strength Profile</div>
+                    <div class="strength-grid">
+                        <div class="strength-item">
+                            <span class="strength-label">International Operations</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Bilingual Professionalism</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Executive-Level Trust</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 92%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Multi-Stakeholder Management</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 90%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CANDIDATE 4: Ana C. -->
+        <div class="candidate-card fade-in">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-identity">
+                        <div class="card-avatar">AC</div>
+                        <div>
+                            <div class="card-name">Ana C.</div>
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Nicaragua &middot; Remote &middot; Native Spanish &middot; Fluent English
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-rate">
+                        <div class="card-rate-amount">$2,500</div>
+                        <div class="card-rate-period">USD / Month</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-narrative">
+                        Ana has six-plus years of <strong>Senior EA and Ops experience at the level where things get complicated</strong>. She's not coordinating meetings. She's coordinating the office of someone whose decisions affect large teams. She brings strong operational instincts — able to manage systems, maintain processes, and handle the kind of cross-functional chaos that comes with a fast-moving executive's orbit. <strong>Native Spanish, fluent English, LATAM female, and full EST overlap</strong> from Nicaragua. Within the comp range and with the kind of EA-plus-ops profile that means she can hold more than a calendar.
+                    </div>
+
+                    <div class="card-section-title">Experience</div>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Senior Executive Assistant &amp; Operations Manager</div>
+                                <div class="exp-company">Senior Leadership Teams &middot; Multiple Sectors</div>
+                                <div class="exp-date">2018 &ndash; Present</div>
+                                <div class="exp-highlight">Executive support &middot; Operational systems management &middot; Cross-department coordination</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Administrative Coordinator</div>
+                                <div class="exp-company">Earlier Roles &middot; Nicaragua</div>
+                                <div class="exp-date">2016 &ndash; 2018</div>
+                                <div class="exp-highlight">Administrative operations &middot; Executive scheduling &middot; Office management</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Core Competencies</div>
+                    <div class="tags">
+                        <span class="tag dark">Senior EA + Ops</span>
+                        <span class="tag dark">Native Spanish</span>
+                        <span class="tag dark">LATAM Female</span>
+                        <span class="tag key">Operational Systems</span>
+                        <span class="tag key">Cross-Functional Coordination</span>
+                        <span class="tag">Executive Inbox Management</span>
+                        <span class="tag">Process Ownership</span>
+                        <span class="tag">Office Administration</span>
+                    </div>
+
+                    <div class="card-section-title">Rex Fit Indicators</div>
+                    <div class="fit-grid">
+                        <div class="fit-item">
+                            <div class="fit-label">Role Type</div>
+                            <div class="fit-value">EA + Ops, Not Just Admin</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Target Profile</div>
+                            <div class="fit-value">LATAM Female, Bilingual</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Compensation</div>
+                            <div class="fit-value">Within Range at $2,500</div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Strength Profile</div>
+                    <div class="strength-grid">
+                        <div class="strength-item">
+                            <span class="strength-label">Operational Systems Management</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 88%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Bilingual Professional Communication</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 92%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Executive Calendar &amp; Inbox</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 86%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Cross-Department Coordination</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CANDIDATE 5: Alejandro R. -->
+        <div class="candidate-card fade-in">
+            <div class="card">
+                <div class="card-top">
+                    <div class="card-identity">
+                        <div class="card-avatar">AR</div>
+                        <div>
+                            <div class="card-name">Alejandro R.</div>
+                            <div class="card-location">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Colombia &middot; Remote &middot; Native Spanish &middot; Bilingual English
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-rate">
+                        <div class="card-rate-amount">$2,200</div>
+                        <div class="card-rate-period">USD / Month</div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-narrative">
+                        Six years in dedicated EA roles with <strong>solid bilingual proficiency and a LATAM base</strong>. Alejandro is the highest-value rate on this list at $2,200/month, and for a search with strong operational complexity, he brings the kind of versatility that makes him worth considering. He's not a fit on the LATAM female preference, but his <strong>Colombia-based EST alignment, bilingual fluency, and consistent track record</strong> in EA roles make him the strongest male profile we reviewed. If the team decides to widen the pool, he's the one.
+                    </div>
+
+                    <div class="card-section-title">Experience</div>
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Executive Assistant</div>
+                                <div class="exp-company">Senior Executives &middot; Corporate Environments</div>
+                                <div class="exp-date">2018 &ndash; Present</div>
+                                <div class="exp-highlight">Calendar management &middot; Executive travel &middot; Bilingual correspondence</div>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-dot-col"><div class="exp-dot"></div></div>
+                            <div class="exp-content">
+                                <div class="exp-role">Administrative Assistant</div>
+                                <div class="exp-company">Earlier Roles &middot; Colombia</div>
+                                <div class="exp-date">2016 &ndash; 2018</div>
+                                <div class="exp-highlight">Office coordination &middot; Document management &middot; Executive support</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Core Competencies</div>
+                    <div class="tags">
+                        <span class="tag dark">6 Years EA</span>
+                        <span class="tag dark">Bilingual Spanish / English</span>
+                        <span class="tag dark">Colombia &mdash; Full EST</span>
+                        <span class="tag key">Calendar &amp; Travel Management</span>
+                        <span class="tag">Executive Correspondence</span>
+                        <span class="tag">Administrative Operations</span>
+                        <span class="tag">Stakeholder Coordination</span>
+                    </div>
+
+                    <div class="card-section-title">Rex Fit Indicators</div>
+                    <div class="fit-grid">
+                        <div class="fit-item">
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$2,200 — Lowest on List</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Time Zone</div>
+                            <div class="fit-value">Colombia — Full EST</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Note</div>
+                            <div class="fit-value">Strong if gender preference expands</div>
+                        </div>
+                    </div>
+
+                    <div class="card-section-title">Strength Profile</div>
+                    <div class="strength-grid">
+                        <div class="strength-item">
+                            <span class="strength-label">Bilingual Communication</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 90%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Calendar &amp; Scheduling Systems</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 86%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Executive Travel Logistics</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 84%"></div></div>
+                        </div>
+                        <div class="strength-item">
+                            <span class="strength-label">Administrative Reliability</span>
+                            <div class="strength-bar-bg"><div class="strength-bar" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMPARISON TABLE ===== -->
+    <section class="why-section fade-in">
+        <div class="editorial-label">At a Glance</div>
+        <h2>Side-by-Side Comparison</h2>
+        <p>How each candidate stacks up against what Peter's private office actually requires.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Marcela C. &star;</th>
+                    <th>Aaliyah H. &star;</th>
+                    <th>Michelle F.</th>
+                    <th>Ana C.</th>
+                    <th>Alejandro R.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>EA / Ops Experience</strong></td>
+                    <td class="check">10+ yrs, C-Suite at WeWork, Upwork</td>
+                    <td class="check">11 yrs CEO support</td>
+                    <td>20+ yrs international EA</td>
+                    <td>6+ yrs Senior EA + Ops</td>
+                    <td>6 yrs EA</td>
+                </tr>
+                <tr>
+                    <td><strong>LATAM / Female</strong></td>
+                    <td class="check">Argentina — Yes</td>
+                    <td>Jamaica — Female</td>
+                    <td class="check">Panama — Yes</td>
+                    <td class="check">Nicaragua — Yes</td>
+                    <td>Colombia — Male</td>
+                </tr>
+                <tr>
+                    <td><strong>Bilingual (ES / EN)</strong></td>
+                    <td class="check">Native + Bilingual</td>
+                    <td>Native EN + Prof. ES</td>
+                    <td class="check">Native Bilingual</td>
+                    <td class="check">Native ES + Fluent EN</td>
+                    <td class="check">Native ES + Bilingual EN</td>
+                </tr>
+                <tr>
+                    <td><strong>EST Time Zone</strong></td>
+                    <td class="check">Full overlap (Argentina)</td>
+                    <td class="check">Full overlap (Jamaica)</td>
+                    <td class="check">Full overlap (Panama)</td>
+                    <td class="check">Full overlap (Nicaragua)</td>
+                    <td class="check">Full overlap (Colombia)</td>
+                </tr>
+                <tr>
+                    <td><strong>Job Stability (&le;3 in 12 yrs)</strong></td>
+                    <td class="check">3 roles in 10+ years</td>
+                    <td class="check">Consistent long tenures</td>
+                    <td class="check">Strong tenure history</td>
+                    <td>2 roles confirmed</td>
+                    <td>2 roles confirmed</td>
+                </tr>
+                <tr>
+                    <td><strong>Founder-Level Support</strong></td>
+                    <td class="check">Founder + C-Suite at 3 major cos.</td>
+                    <td class="check">CEO-level for 11 years</td>
+                    <td>Senior executives, international</td>
+                    <td>Senior leadership teams</td>
+                    <td>Senior executives</td>
+                </tr>
+                <tr>
+                    <td><strong>Personal Logistics (Family)</strong></td>
+                    <td class="check">ThirdLove, WeWork — Yes</td>
+                    <td>CEO-level scope — likely</td>
+                    <td class="check">International personal + prof.</td>
+                    <td>Confirm in interview</td>
+                    <td>Confirm in interview</td>
+                </tr>
+                <tr>
+                    <td><strong>Monthly Rate</strong></td>
+                    <td>$3,000</td>
+                    <td class="check">$2,500</td>
+                    <td class="check">$2,500</td>
+                    <td class="check">$2,500</td>
+                    <td class="check">$2,200</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ===== RECRUITING TEAM ===== -->
+    <section class="team-section fade-in">
+        <div class="team-inner">
+            <div class="editorial-label">Your Dedicated Team</div>
+            <h2>Meet the Team Running Your Search</h2>
+            <p class="team-subtitle">You'll work with us directly through every step of the process.</p>
+
+            <div class="team-grid">
+                <!-- Guillermo Lindo -->
+                <div class="team-card">
+                    <div class="team-card-top">
+                        <div class="team-photo-initials">GL</div>
+                    </div>
+                    <div class="team-card-body">
+                        <div class="team-name">Guillermo Lindo</div>
+                        <div class="team-role">Talent Advisor</div>
+                        <div class="team-location">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            San Pedro Sula, Honduras
+                        </div>
+                        <p class="team-bio">Talent Advisor at Sagan with a background in B2B sales and outbound prospecting. C1 English, native Spanish, and experienced in connecting LATAM talent with U.S. markets. He's leading the day-to-day sourcing on this search.</p>
+                        <a href="mailto:guillermo.l@getsagan.com" class="team-email">guillermo.l@getsagan.com</a>
+                    </div>
+                </div>
+
+                <!-- Jesus Pacheco -->
+                <div class="team-card">
+                    <div class="team-card-top">
+                        <img class="team-photo" src="https://saganrecruitment.com/wp-content/uploads/2025/10/Jesus-Pacheco.jpeg" alt="Jes&uacute;s Pacheco">
+                    </div>
+                    <div class="team-card-body">
+                        <div class="team-name">Jes&uacute;s Pacheco</div>
+                        <div class="team-role">Head of White Glove Hirings</div>
+                        <div class="team-location">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Mendoza, Argentina
+                        </div>
+                        <p class="team-bio">Leads White Glove Hirings at Sagan. MIT Supply Chain background, 16 years in sales and operations. He oversees the search strategy, advises on fit, and is the one you talk to when it matters.</p>
+                        <a href="mailto:jesus.p@getsagan.com" class="team-email">jesus.p@getsagan.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sagan Info -->
+            <div class="sagan-info">
+                <div class="sagan-logo-mark">S</div>
+                <div class="sagan-text">
+                    <h3>Powered by Sagan</h3>
+                    <p>Sagan connects exceptional professionals from <strong>Latin America, Africa, Asia, the Middle East, Central &amp; Eastern Europe, and beyond</strong> with leading American companies. We run 20,000+ applications through rigorous screening every month so you only see the ones worth your time.</p>
+                    <div class="sagan-stats">
+                        <div class="sagan-stat"><strong>20,000+</strong> Applications / Month</div>
+                        <div class="sagan-stat"><strong>2,000+</strong> Placements</div>
+                        <div class="sagan-stat"><strong>30+</strong> Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER CTA ===== -->
+    <section class="footer-cta">
+        <h2>Ready to <strong>meet your next Private Office Director?</strong></h2>
+        <p>Tell us who you want to interview and we'll set it up within 24 hours.</p>
+        <a href="mailto:guillermo.l@getsagan.com?cc=jesus.p@getsagan.com" class="footer-contact">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Schedule Next Steps
+        </a>
+        <div class="footer-bottom">
+            <div class="footer-logo">Sagan</div>
+            <div class="footer-note">Prepared exclusively for Rex &middot; February 2026 &middot; Confidential</div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const barObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bars = entry.target.querySelectorAll('.strength-bar');
+                    bars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => { bar.style.width = width; }, 200);
+                    });
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.strength-grid').forEach(el => barObserver.observe(el));
+    </script>
+
+</body>
+</html>
