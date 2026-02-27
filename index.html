@@ -128,10 +128,7 @@
             animation: fadeUp 0.8s ease 0.3s forwards;
         }
 
-        .hero h1 strong {
-            font-weight: 700;
-            color: var(--rex-white);
-        }
+        .hero h1 strong { font-weight: 700; color: var(--rex-white); }
 
         .hero-subtitle {
             font-size: 17px;
@@ -154,11 +151,7 @@
             flex-wrap: wrap;
         }
 
-        .hero-meta-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
+        .hero-meta-item { display: flex; flex-direction: column; gap: 5px; }
 
         .hero-meta-label {
             font-family: 'Poppins', sans-serif;
@@ -202,31 +195,13 @@
             line-height: 1.25;
         }
 
-        .editorial p {
-            font-size: 16px;
-            line-height: 1.9;
-            color: var(--rex-gray);
-            margin-bottom: 20px;
-        }
+        .editorial p { font-size: 16px; line-height: 1.9; color: var(--rex-gray); margin-bottom: 20px; }
+        .editorial p strong { color: var(--rex-dark); font-weight: 600; }
 
-        .editorial p strong {
-            color: var(--rex-dark);
-            font-weight: 600;
-        }
-
-        .editorial-divider {
-            width: 48px;
-            height: 3px;
-            background: var(--rex-blue);
-            border-radius: 2px;
-            margin: 44px 0;
-        }
+        .editorial-divider { width: 48px; height: 3px; background: var(--rex-blue); border-radius: 2px; margin: 44px 0; }
 
         /* ===== CANDIDATES SECTION ===== */
-        .candidates-section {
-            background: var(--rex-light);
-            padding: 80px 0;
-        }
+        .candidates-section { background: var(--rex-light); padding: 80px 0; }
 
         .candidates-header {
             max-width: 1100px;
@@ -244,16 +219,9 @@
             color: var(--rex-dark);
         }
 
-        .candidates-header p {
-            font-size: 16px;
-            color: var(--rex-gray);
-        }
+        .candidates-header p { font-size: 16px; color: var(--rex-gray); }
 
-        .candidate-card {
-            max-width: 1100px;
-            margin: 0 auto 36px;
-            padding: 0 40px;
-        }
+        .candidate-card { max-width: 1100px; margin: 0 auto 36px; padding: 0 40px; }
 
         .card {
             background: var(--rex-white);
@@ -263,10 +231,7 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.1);
-        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 16px 48px rgba(0,0,0,0.1); }
 
         .card-top {
             background: var(--rex-dark);
@@ -276,11 +241,7 @@
             align-items: flex-start;
         }
 
-        .card-identity {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
+        .card-identity { display: flex; align-items: center; gap: 20px; }
 
         .card-avatar {
             width: 56px;
@@ -297,32 +258,13 @@
             flex-shrink: 0;
         }
 
-        .card-name {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--rex-white);
-            margin-bottom: 5px;
-        }
+        .card-name { font-size: 22px; font-weight: 700; color: var(--rex-white); margin-bottom: 5px; }
 
-        .card-name-badge {
-            color: #5b9fff;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: 8px;
-        }
+        .card-name-badge { color: #5b9fff; font-size: 12px; font-weight: 600; margin-left: 8px; }
 
-        .card-location {
-            font-size: 13px;
-            color: rgba(255, 255, 255, 0.45);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .card-location { font-size: 13px; color: rgba(255, 255, 255, 0.45); display: flex; align-items: center; gap: 6px; }
 
-        .card-rate {
-            text-align: right;
-        }
+        .card-rate { text-align: right; }
 
         .card-rate-amount {
             font-family: 'Poppins', sans-serif;
@@ -351,11 +293,7 @@
             padding-left: 20px;
         }
 
-        .card-narrative strong {
-            color: var(--rex-dark);
-            font-weight: 600;
-            font-style: normal;
-        }
+        .card-narrative strong { color: var(--rex-dark); font-weight: 600; font-style: normal; }
 
         .card-section-title {
             font-family: 'Poppins', sans-serif;
@@ -370,25 +308,34 @@
 
         .card-section-title:first-of-type { margin-top: 0; }
 
+        .card-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 28px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--rex-blue);
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid rgba(1, 82, 219, 0.25);
+            border-radius: 100px;
+            background: var(--rex-blue-light);
+            transition: all 0.2s ease;
+        }
+
+        .card-email:hover { background: var(--rex-blue-soft); border-color: rgba(1, 82, 219, 0.4); }
+
         /* Experience */
         .experience-list { display: flex; flex-direction: column; gap: 20px; }
-
         .exp-item { display: flex; gap: 16px; align-items: flex-start; }
-
         .exp-dot-col { display: flex; flex-direction: column; align-items: center; padding-top: 6px; }
-
         .exp-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--rex-blue); flex-shrink: 0; }
-
         .exp-line { width: 2px; flex: 1; background: var(--rex-gray-light); margin-top: 6px; }
-
         .exp-content { flex: 1; padding-bottom: 4px; }
-
         .exp-role { font-size: 14px; font-weight: 600; color: var(--rex-dark); }
-
         .exp-company { font-size: 13px; color: var(--rex-gray); }
-
         .exp-date { font-size: 12px; color: rgba(107, 114, 128, 0.7); margin-top: 2px; }
-
         .exp-highlight { font-size: 13px; color: #0152db; font-weight: 500; margin-top: 4px; }
 
         /* Tags */
@@ -412,39 +359,23 @@
             font-weight: 600;
         }
 
-        .tag.dark {
-            background: var(--rex-dark);
-            border-color: var(--rex-dark);
-            color: var(--rex-white);
-        }
+        .tag.dark { background: var(--rex-dark); border-color: var(--rex-dark); color: var(--rex-white); }
 
         /* Fit Grid */
         .fit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 8px; }
-
         .fit-item { background: var(--rex-light); border-radius: 10px; padding: 14px 16px; }
-
         .fit-label { font-family: 'Poppins', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; color: var(--rex-gray); margin-bottom: 5px; }
-
         .fit-value { font-size: 13px; font-weight: 600; color: var(--rex-dark); }
 
         /* Strength Bars */
         .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; }
-
         .strength-item { display: flex; flex-direction: column; gap: 6px; }
-
         .strength-label { font-size: 13px; font-weight: 500; color: var(--rex-dark); }
-
         .strength-bar-bg { height: 5px; background: var(--rex-light); border-radius: 3px; overflow: hidden; }
-
-        .strength-bar {
-            height: 100%;
-            border-radius: 3px;
-            background: linear-gradient(90deg, var(--rex-blue-dark), var(--rex-blue));
-            transition: width 1.5s ease;
-        }
+        .strength-bar { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--rex-blue-dark), var(--rex-blue)); transition: width 1.5s ease; }
 
         /* ===== COMPARISON ===== */
-        .why-section { max-width: 1100px; margin: 0 auto; padding: 80px 40px; }
+        .why-section { max-width: 1200px; margin: 0 auto; padding: 80px 40px; }
 
         .why-section h2 {
             font-family: 'Playfair Display', Georgia, serif;
@@ -457,33 +388,34 @@
 
         .why-section .why-intro { font-size: 16px; line-height: 1.8; color: var(--rex-gray); margin-bottom: 32px; max-width: 700px; }
 
-        .comparison-table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+        .table-wrap { overflow-x: auto; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 900px; }
 
         .comparison-table thead th {
             background: var(--rex-dark);
             color: var(--rex-white);
-            padding: 13px 12px;
+            padding: 12px 10px;
             text-align: left;
             font-weight: 600;
             font-size: 11px;
             letter-spacing: 0.3px;
             font-family: 'Poppins', sans-serif;
+            white-space: nowrap;
         }
 
         .comparison-table thead th:first-child { border-radius: 8px 0 0 0; }
         .comparison-table thead th:last-child { border-radius: 0 8px 0 0; }
 
-        .comparison-table tbody td { padding: 12px; border-bottom: 1px solid var(--rex-gray-light); color: var(--rex-dark); vertical-align: top; }
+        .comparison-table tbody td { padding: 10px; border-bottom: 1px solid var(--rex-gray-light); color: var(--rex-dark); vertical-align: top; line-height: 1.4; }
 
         .comparison-table tbody tr:last-child td { border-bottom: none; }
-
         .comparison-table tbody tr:nth-child(even) { background: var(--rex-light); }
 
         .check { color: var(--rex-green); font-weight: 600; }
 
         /* ===== RECRUITING TEAM ===== */
         .team-section { background: var(--rex-light); padding: 80px 0; }
-
         .team-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
 
         .team-section h2 {
@@ -525,7 +457,6 @@
         }
 
         .team-card-body { padding: 58px 24px 28px; }
-
         .team-name { font-size: 17px; font-weight: 700; color: var(--rex-dark); margin-bottom: 4px; }
 
         .team-role {
@@ -539,11 +470,8 @@
         }
 
         .team-location { font-size: 13px; color: var(--rex-gray); margin-bottom: 14px; display: flex; align-items: center; justify-content: center; gap: 5px; }
-
         .team-bio { font-size: 13px; line-height: 1.7; color: var(--rex-gray); }
-
         .team-email { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--rex-blue); text-decoration: none; transition: color 0.2s ease; }
-
         .team-email:hover { color: var(--rex-blue-dark); }
 
         /* Sagan Info */
@@ -557,34 +485,14 @@
             box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 28px rgba(0,0,0,0.06);
         }
 
-        .sagan-logo-wrap {
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .sagan-logo-wrap img {
-            height: 36px;
-            width: auto;
-        }
-
-        .sagan-divider {
-            width: 1px;
-            height: 52px;
-            background: var(--rex-gray-light);
-            flex-shrink: 0;
-        }
-
+        .sagan-logo-wrap { flex-shrink: 0; display: flex; align-items: center; }
+        .sagan-logo-wrap img { height: 36px; width: auto; }
+        .sagan-divider { width: 1px; height: 52px; background: var(--rex-gray-light); flex-shrink: 0; }
         .sagan-text h3 { font-size: 17px; font-weight: 700; color: var(--rex-dark); margin-bottom: 6px; }
-
         .sagan-text p { font-size: 14px; line-height: 1.7; color: var(--rex-gray); margin: 0; }
-
         .sagan-text p strong { color: var(--rex-dark); font-weight: 600; }
-
         .sagan-stats { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; }
-
         .sagan-stat { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--rex-gray); }
-
         .sagan-stat strong { color: var(--rex-blue); font-weight: 700; }
 
         /* ===== FOOTER ===== */
@@ -599,7 +507,6 @@
         }
 
         .footer-cta h2 strong { font-weight: 700; }
-
         .footer-cta p { font-size: 15px; color: rgba(255, 255, 255, 0.4); margin-bottom: 36px; }
 
         .footer-contact {
@@ -631,23 +538,12 @@
             margin-right: auto;
         }
 
-        .footer-logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            color: rgba(255,255,255,0.25);
-        }
-
+        .footer-logo { font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.25); }
         .footer-note { font-size: 12px; color: rgba(255,255,255,0.18); }
 
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-
         .fade-in.visible { opacity: 1; transform: translateY(0); }
 
         /* ===== RESPONSIVE ===== */
@@ -668,8 +564,7 @@
             .sagan-stats { justify-content: center; }
             .footer-bottom { flex-direction: column; gap: 10px; text-align: center; margin-top: 40px; }
             .team-inner { padding: 0 24px; }
-            .why-section { overflow-x: auto; }
-            .comparison-table { min-width: 700px; }
+            .why-section { padding: 52px 16px; }
         }
     </style>
 </head>
@@ -725,7 +620,7 @@
             So we filtered hard. We started by eliminating anyone without a clear track record of high-trust, principal-level support. No generalists. No one who needed a clear playbook handed to them. We were looking for <strong>candidates who've operated in high-stakes environments</strong> — supporting C-suite principals, managing sensitive correspondence, running calendars that affect entire organizations. Then we layered in the specifics: bilingual Spanish and English, full EST time zone alignment, LATAM or Caribbean preferred, and demonstrated capacity to support someone's personal and professional life simultaneously.
         </p>
         <p>
-            We screened for career backgrounds rooted in executive support, operations, and principal-level roles — people who have sat in rooms where real decisions happen.
+            We screened for career backgrounds rooted in executive support, operations, and principal-level roles. People who have sat in rooms where real decisions happen.
         </p>
         <div class="editorial-divider"></div>
         <p style="font-size: 14px; color: var(--rex-gray);">
@@ -741,14 +636,14 @@
             <p>Eight candidates. All vetted against what Peter's private office actually demands.</p>
         </div>
 
-        <!-- CANDIDATE 1: Arturo Noriega del Valle ★ Top Pick -->
+        <!-- CANDIDATE 1: Arturo ★ Top Pick -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">AN</div>
+                        <div class="card-avatar">AR</div>
                         <div>
-                            <div class="card-name">Arturo Noriega del Valle <span class="card-name-badge">&#9733; Top Recommendation</span></div>
+                            <div class="card-name">Arturo <span class="card-name-badge">&#9733; Top Recommendation</span></div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Mexico &middot; Remote &middot; Native Spanish &middot; Bilingual English
@@ -762,7 +657,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Arturo is the <strong>strongest profile in this batch, and it isn't close</strong>. He scores 92 in our screening — the highest across the entire pool we reviewed for this search. His background combines executive-level operations support, bilingual fluency, and the kind of high-trust exposure that comes from working directly with senior principals in fast-moving organizations. <strong>Mexico-based, fully bilingual, EST-aligned</strong>. He's the profile this seat demands: someone who executes without needing direction, anticipates before being asked, and holds complexity without losing composure.
+                        Arturo is the <strong>strongest profile in this batch, and it isn't close</strong>. His background combines executive-level operations support, bilingual fluency, and the kind of high-trust exposure that comes from working directly with senior principals in fast-moving organizations. <strong>Mexico-based, fully bilingual, EST-aligned</strong>. He's the profile this seat demands: someone who executes without needing direction, anticipates before being asked, and holds complexity without losing composure.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -798,7 +693,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 92 / 100</span>
                         <span class="tag dark">Bilingual Spanish / English</span>
                         <span class="tag dark">LATAM-Based (Mexico)</span>
                         <span class="tag key">C-Suite EA + Ops</span>
@@ -812,16 +706,16 @@
                     <div class="card-section-title">Rex Fit Indicators</div>
                     <div class="fit-grid">
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">92 — Top of Pool</div>
-                        </div>
-                        <div class="fit-item">
                             <div class="fit-label">Profile Match</div>
                             <div class="fit-value">Bilingual, LATAM, Male</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Time Zone</div>
                             <div class="fit-value">Mexico — Full EST</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$2,900 / month</div>
                         </div>
                     </div>
 
@@ -844,18 +738,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:arturo_noriegav@yahoo.com.mx" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        arturo_noriegav@yahoo.com.mx
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 2: Faye Dela Rosa ★ Strong Match -->
+        <!-- CANDIDATE 2: Faye ★ Strong Match -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">FD</div>
+                        <div class="card-avatar">FA</div>
                         <div>
-                            <div class="card-name">Faye Dela Rosa <span class="card-name-badge">&#9733; Strong Match</span></div>
+                            <div class="card-name">Faye <span class="card-name-badge">&#9733; Strong Match</span></div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Philippines &middot; Remote &middot; Native English &middot; Bilingual Spanish
@@ -869,7 +768,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Faye scores 86 in screening and stands out immediately for one reason: she combines <strong>strong executive support experience with bilingual fluency and exceptional value at $2,200/month</strong>. Philippines-based professionals bring a well-established track record in U.S. executive support, and Faye is one of the stronger profiles in that cohort. Native English with Spanish at a bilingual level. <strong>Fully available for EST hours, detail-oriented, and with the kind of operational awareness</strong> that goes beyond scheduling. If the search extends beyond LATAM, she's the obvious first call.
+                        Faye stands out for one reason: she combines <strong>strong executive support experience with bilingual fluency and exceptional value at $2,200/month</strong>. Native English with Spanish at a bilingual level. <strong>Fully available for EST hours, detail-oriented, and with the kind of operational awareness</strong> that goes beyond scheduling. If the search extends beyond LATAM, she's the obvious first call.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -896,7 +795,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 86 / 100</span>
                         <span class="tag dark">Native English</span>
                         <span class="tag dark">Bilingual Spanish</span>
                         <span class="tag key">Remote Executive Support</span>
@@ -909,16 +807,16 @@
                     <div class="card-section-title">Rex Fit Indicators</div>
                     <div class="fit-grid">
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">86 — Second on List</div>
-                        </div>
-                        <div class="fit-item">
                             <div class="fit-label">Rate</div>
-                            <div class="fit-value">$2,200 — Best Value</div>
+                            <div class="fit-value">$2,200 — Strong Value</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Language</div>
                             <div class="fit-value">Native EN + Bilingual ES</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Coverage</div>
+                            <div class="fit-value">EST-Flexible</div>
                         </div>
                     </div>
 
@@ -941,18 +839,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 87%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:mafayedelarosa@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        mafayedelarosa@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 3: Daniella Dueñas -->
+        <!-- CANDIDATE 3: Daniella -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">DD</div>
+                        <div class="card-avatar">DL</div>
                         <div>
-                            <div class="card-name">Daniella Due&ntilde;as</div>
+                            <div class="card-name">Daniella</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Colombia &middot; Remote &middot; Native Spanish &middot; Bilingual English
@@ -966,7 +869,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Daniella sits at 83 in screening and brings exactly the profile Rex is targeting. <strong>Colombia-based LATAM female with bilingual fluency and a track record in executive-level support</strong>. She operates with the precision this role demands — organized, proactive, and fluent in both the language and cadence of senior leadership environments. At $2,500/month, she's positioned well within range and comes in <strong>as one of the cleanest profile matches on the LATAM female preference</strong> across the full candidate pool.
+                        Daniella brings exactly the profile Rex is targeting. <strong>Colombia-based LATAM female with bilingual fluency and a track record in executive-level support</strong>. She operates with the precision this role demands — organized, proactive, and fluent in both the language and cadence of senior leadership environments. At $2,500/month, she's positioned well within range and comes in <strong>as one of the cleanest profile matches on the LATAM female preference</strong> across the full candidate pool.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -993,7 +896,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 83 / 100</span>
                         <span class="tag dark">LATAM Female</span>
                         <span class="tag dark">Bilingual Spanish / English</span>
                         <span class="tag key">Executive-Level Support</span>
@@ -1010,12 +912,12 @@
                             <div class="fit-value">LATAM Female, Bilingual</div>
                         </div>
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">83 — Strong</div>
-                        </div>
-                        <div class="fit-item">
                             <div class="fit-label">Time Zone</div>
                             <div class="fit-value">Colombia — Full EST</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$2,500 / month</div>
                         </div>
                     </div>
 
@@ -1038,18 +940,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 83%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:d.duenas.tamasco@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        d.duenas.tamasco@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 4: Cassandra Arthur -->
+        <!-- CANDIDATE 4: Cassandra -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">CA</div>
+                        <div class="card-avatar">CS</div>
                         <div>
-                            <div class="card-name">Cassandra Arthur</div>
+                            <div class="card-name">Cassandra</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Saint Lucia &middot; Remote &middot; Native English &middot; Professional Spanish
@@ -1063,7 +970,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Cassandra scores 81 in screening and is one of the strongest English-native profiles in this batch. Saint Lucia puts her on <strong>perfect Atlantic time alignment — full EST overlap with no scheduling friction</strong>. Her background in executive support has produced someone who understands the pace of a principal-led office: fast, precise, and with no tolerance for ambiguity. <strong>Native English fluency and professional Spanish</strong> means she can handle any communication her principal needs without switching gears. Reliable, high-output, and priced competitively.
+                        Cassandra is one of the strongest English-native profiles in this batch. Saint Lucia puts her on <strong>perfect Atlantic time alignment — full EST overlap with no scheduling friction</strong>. Her background in executive support has produced someone who understands the pace of a principal-led office: fast, precise, and with no tolerance for ambiguity. <strong>Native English fluency and professional Spanish</strong> means she can handle any communication her principal needs without switching gears.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -1090,7 +997,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 81 / 100</span>
                         <span class="tag dark">Native English</span>
                         <span class="tag dark">Caribbean — Full EST</span>
                         <span class="tag key">Principal-Level Support</span>
@@ -1103,16 +1009,16 @@
                     <div class="card-section-title">Rex Fit Indicators</div>
                     <div class="fit-grid">
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">81 — Solid Profile</div>
-                        </div>
-                        <div class="fit-item">
                             <div class="fit-label">Time Zone</div>
                             <div class="fit-value">Saint Lucia — Full EST</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Language</div>
                             <div class="fit-value">Native EN + Prof. ES</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$2,500 / month</div>
                         </div>
                     </div>
 
@@ -1135,18 +1041,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 82%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:cassandra21arthur@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        cassandra21arthur@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 5: Julia de Lima Souza -->
+        <!-- CANDIDATE 5: Julia -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
                         <div class="card-avatar">JL</div>
                         <div>
-                            <div class="card-name">Julia de Lima Souza</div>
+                            <div class="card-name">Julia</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Brazil &middot; Remote &middot; Native Portuguese &middot; Bilingual English
@@ -1160,7 +1071,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Julia scores 82 in screening and presents <strong>the most compelling value proposition on this list</strong>. At $1,200/month, she is substantially below market rate for her experience level. Brazil-based, bilingual in English, with the kind of operational sensibility that shows up in candidates who've worked directly with demanding principals. <strong>She's the profile to consider if Peter wants exceptional talent at a fraction of the cost</strong>. The tradeoff: Portuguese is her native language, so Spanish fluency should be confirmed at interview. The upside is undeniable.
+                        Julia presents <strong>the most compelling value proposition on this list</strong>. At $1,200/month, she is substantially below market rate for her experience level. Brazil-based, bilingual in English, with the kind of operational sensibility that shows up in candidates who've worked directly with demanding principals. <strong>She's the profile to consider if Peter wants exceptional talent at a fraction of the cost</strong>. The tradeoff: Portuguese is her native language, so Spanish fluency should be confirmed at interview.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -1187,10 +1098,9 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 82 / 100</span>
                         <span class="tag dark">Brazil — LATAM</span>
                         <span class="tag dark">Bilingual English</span>
-                        <span class="tag key">Best Rate on List ($1,200)</span>
+                        <span class="tag key">Best Rate on List</span>
                         <span class="tag key">Executive-Level Operations</span>
                         <span class="tag">Calendar &amp; Travel</span>
                         <span class="tag">Bilingual Communications</span>
@@ -1200,12 +1110,12 @@
                     <div class="card-section-title">Rex Fit Indicators</div>
                     <div class="fit-grid">
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">82 — Strong</div>
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$1,200 — Lowest</div>
                         </div>
                         <div class="fit-item">
-                            <div class="fit-label">Rate</div>
-                            <div class="fit-value">$1,200 — Lowest Value</div>
+                            <div class="fit-label">Time Zone</div>
+                            <div class="fit-value">Brazil — Full EST</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Note</div>
@@ -1232,18 +1142,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 85%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:julialima92@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        julialima92@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 6: Anne Mwende Ndoo -->
+        <!-- CANDIDATE 6: Anne -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">AM</div>
+                        <div class="card-avatar">AN</div>
                         <div>
-                            <div class="card-name">Anne Mwende Ndoo</div>
+                            <div class="card-name">Anne</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Kenya &middot; Remote &middot; Native English &middot; Professional French
@@ -1257,7 +1172,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Anne scores 78 in screening and has one credential that sets her apart immediately: she's been an <strong>EA to a CEO</strong>. That's not a generalist background. That's someone who has operated at the center of a principal's universe, managing the full scope of what that position demands. <strong>Kenya-based with native English fluency</strong> and a level of professionalism that comes through clearly in her profile. EST time overlap requires early morning starts on her end, and she's done it. At $2,800/month, she's a strong candidate for anyone prioritizing principal-level experience depth.
+                        Anne has one credential that sets her apart immediately: she's been an <strong>EA to a CEO</strong>. That's not a generalist background. That's someone who has operated at the center of a principal's universe, managing the full scope of what that position demands. <strong>Kenya-based with native English fluency</strong> and a level of professionalism that comes through clearly in her profile. At $2,800/month, she's a strong candidate for anyone prioritizing principal-level experience depth.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -1284,7 +1199,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 78 / 100</span>
                         <span class="tag dark">EA to CEO — Direct</span>
                         <span class="tag dark">Native English</span>
                         <span class="tag key">Principal-Level Depth</span>
@@ -1301,8 +1215,8 @@
                             <div class="fit-value">EA to CEO — Confirmed</div>
                         </div>
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">78 — Good</div>
+                            <div class="fit-label">Rate</div>
+                            <div class="fit-value">$2,800 / month</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Note</div>
@@ -1329,18 +1243,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 80%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:annemwende510@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        annemwende510@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 7: Jacqueline Waweru -->
+        <!-- CANDIDATE 7: Jacqueline -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">JW</div>
+                        <div class="card-avatar">JA</div>
                         <div>
-                            <div class="card-name">Jacqueline Waweru</div>
+                            <div class="card-name">Jacqueline</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Kenya &middot; Remote &middot; Native English &middot; Bilingual Spanish
@@ -1354,7 +1273,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Jacqueline scores 76 in screening and carries a credential that stands out in this pool: she has specific <strong>EA experience supporting LATAM-market operations</strong>, which means she's already navigated the bilingual, cross-cultural dynamics that come with supporting a principal operating across U.S. and Latin American contexts. <strong>Native English with Spanish bilingual fluency</strong> — rare for an Africa-based profile. At $2,000/month, she's priced as one of the most competitive options on this list relative to her experience profile.
+                        Jacqueline carries a credential that stands out in this pool: she has specific <strong>EA experience supporting LATAM-market operations</strong>, which means she's already navigated the bilingual, cross-cultural dynamics that come with supporting a principal operating across U.S. and Latin American contexts. <strong>Native English with Spanish bilingual fluency</strong> — rare for an Africa-based profile. At $2,000/month, she's priced as one of the most competitive options on this list relative to her experience.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -1381,11 +1300,10 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 76 / 100</span>
                         <span class="tag dark">Bilingual EN / ES</span>
                         <span class="tag dark">LATAM Market Experience</span>
                         <span class="tag key">Cross-Cultural EA</span>
-                        <span class="tag key">Value at $2,000/mo</span>
+                        <span class="tag key">Competitive Rate</span>
                         <span class="tag">Bilingual Operations</span>
                         <span class="tag">Executive Coordination</span>
                         <span class="tag">Remote Support</span>
@@ -1394,12 +1312,12 @@
                     <div class="card-section-title">Rex Fit Indicators</div>
                     <div class="fit-grid">
                         <div class="fit-item">
-                            <div class="fit-label">Screen Score</div>
-                            <div class="fit-value">76 — Solid</div>
-                        </div>
-                        <div class="fit-item">
                             <div class="fit-label">LATAM Experience</div>
                             <div class="fit-value">Direct — Confirmed</div>
+                        </div>
+                        <div class="fit-item">
+                            <div class="fit-label">Language</div>
+                            <div class="fit-value">Bilingual EN / ES</div>
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Rate</div>
@@ -1426,18 +1344,23 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 80%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:terryjacqueline91@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        terryjacqueline91@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
 
-        <!-- CANDIDATE 8: Daniel Díaz Aciego -->
+        <!-- CANDIDATE 8: Daniel -->
         <div class="candidate-card fade-in">
             <div class="card">
                 <div class="card-top">
                     <div class="card-identity">
-                        <div class="card-avatar">DA</div>
+                        <div class="card-avatar">DN</div>
                         <div>
-                            <div class="card-name">Daniel Andr&eacute;s D&iacute;az Aciego</div>
+                            <div class="card-name">Daniel</div>
                             <div class="card-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 Peru &middot; Remote &middot; Native Spanish &middot; Bilingual English
@@ -1451,7 +1374,7 @@
                 </div>
                 <div class="card-body">
                     <div class="card-narrative">
-                        Daniel scores 72 in screening and rounds out this batch as a <strong>dependable LATAM bilingual profile with solid operations grounding</strong>. Peru gives him full EST alignment. His background in executive and operations support translates to the core demands of this role — scheduling, coordination, communications, and the operational backbone that keeps a private office running. <strong>Native Spanish, bilingual English, and a clean professional track record</strong>. He's the steady option on this list: not the most exciting resume, but someone who can be counted on.
+                        Daniel rounds out this batch as a <strong>dependable LATAM bilingual profile with solid operations grounding</strong>. Peru gives him full EST alignment. His background in executive and operations support translates to the core demands of this role: scheduling, coordination, communications, and the operational backbone that keeps a private office running. <strong>Native Spanish, bilingual English, and a clean professional track record</strong>. Steady, reliable, and priced at $2,500/month.
                     </div>
 
                     <div class="card-section-title">Experience</div>
@@ -1478,7 +1401,6 @@
 
                     <div class="card-section-title">Core Competencies</div>
                     <div class="tags">
-                        <span class="tag dark">Score: 72 / 100</span>
                         <span class="tag dark">LATAM Male</span>
                         <span class="tag dark">Bilingual Spanish / English</span>
                         <span class="tag key">EA + Operations Support</span>
@@ -1500,7 +1422,7 @@
                         </div>
                         <div class="fit-item">
                             <div class="fit-label">Rate</div>
-                            <div class="fit-value">$2,500 — Within Range</div>
+                            <div class="fit-value">$2,500 / month</div>
                         </div>
                     </div>
 
@@ -1523,6 +1445,11 @@
                             <div class="strength-bar-bg"><div class="strength-bar" style="width: 78%"></div></div>
                         </div>
                     </div>
+
+                    <a href="mailto:contract.rachi@gmail.com" class="card-email">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        contract.rachi@gmail.com
+                    </a>
                 </div>
             </div>
         </div>
@@ -1533,86 +1460,93 @@
     <section class="why-section fade-in">
         <div class="section-label">At a Glance</div>
         <h2>Side-by-Side Comparison</h2>
-        <p class="why-intro">How the top six candidates stack up against what Peter's private office actually requires.</p>
+        <p class="why-intro">All eight candidates, stacked against what Peter's private office actually requires.</p>
 
-        <table class="comparison-table">
-            <thead>
-                <tr>
-                    <th>Criteria</th>
-                    <th>Arturo N. &#9733;</th>
-                    <th>Faye D. &#9733;</th>
-                    <th>Daniella D.</th>
-                    <th>Cassandra A.</th>
-                    <th>Julia L.</th>
-                    <th>Anne M.</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Screen Score</strong></td>
-                    <td class="check">92 — Top</td>
-                    <td class="check">86 — Strong</td>
-                    <td>83 — Good</td>
-                    <td>81 — Good</td>
-                    <td>82 — Good</td>
-                    <td>78 — Solid</td>
-                </tr>
-                <tr>
-                    <td><strong>EA / Ops Experience</strong></td>
-                    <td class="check">Senior EA + Ops Lead</td>
-                    <td class="check">Remote EA, U.S.-facing</td>
-                    <td>Executive EA, Corp</td>
-                    <td>EA, Principal Support</td>
-                    <td>EA, Management</td>
-                    <td class="check">EA to CEO — Direct</td>
-                </tr>
-                <tr>
-                    <td><strong>LATAM / Female</strong></td>
-                    <td>Mexico — Male</td>
-                    <td>Philippines — Female</td>
-                    <td class="check">Colombia — Female</td>
-                    <td>Caribbean — Female</td>
-                    <td class="check">Brazil — Female</td>
-                    <td>Kenya — Female</td>
-                </tr>
-                <tr>
-                    <td><strong>Bilingual (ES / EN)</strong></td>
-                    <td class="check">Native ES + Bilingual EN</td>
-                    <td class="check">Native EN + Bilingual ES</td>
-                    <td class="check">Native ES + Bilingual EN</td>
-                    <td>Native EN + Prof. ES</td>
-                    <td>Bilingual EN (confirm ES)</td>
-                    <td>Native EN + Prof. FR</td>
-                </tr>
-                <tr>
-                    <td><strong>EST Time Zone</strong></td>
-                    <td class="check">Mexico — Full EST</td>
-                    <td class="check">Philippines (flexible)</td>
-                    <td class="check">Colombia — Full EST</td>
-                    <td class="check">Saint Lucia — Full EST</td>
-                    <td class="check">Brazil — Full EST</td>
-                    <td>Kenya — Early starts</td>
-                </tr>
-                <tr>
-                    <td><strong>Principal-Level Support</strong></td>
-                    <td class="check">C-Suite, confirmed</td>
-                    <td class="check">Senior leadership</td>
-                    <td>Executive teams</td>
-                    <td>Principal-level</td>
-                    <td>Senior management</td>
-                    <td class="check">CEO-direct, confirmed</td>
-                </tr>
-                <tr>
-                    <td><strong>Monthly Rate</strong></td>
-                    <td>$2,900</td>
-                    <td class="check">$2,200</td>
-                    <td class="check">$2,500</td>
-                    <td class="check">$2,500</td>
-                    <td class="check">$1,200 — Lowest</td>
-                    <td>$2,800</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrap">
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Arturo &#9733;</th>
+                        <th>Faye &#9733;</th>
+                        <th>Daniella</th>
+                        <th>Cassandra</th>
+                        <th>Julia</th>
+                        <th>Anne</th>
+                        <th>Jacqueline</th>
+                        <th>Daniel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>EA / Ops Experience</strong></td>
+                        <td class="check">Senior EA + Ops Lead</td>
+                        <td class="check">Remote EA, U.S.-facing</td>
+                        <td>Executive EA</td>
+                        <td>Principal EA</td>
+                        <td>EA, Management</td>
+                        <td class="check">EA to CEO direct</td>
+                        <td>EA, LATAM ops</td>
+                        <td>EA + Ops</td>
+                    </tr>
+                    <tr>
+                        <td><strong>LATAM / Female</strong></td>
+                        <td>Mexico — Male</td>
+                        <td>Philippines — Female</td>
+                        <td class="check">Colombia — Female</td>
+                        <td>Caribbean — Female</td>
+                        <td class="check">Brazil — Female</td>
+                        <td>Kenya — Female</td>
+                        <td>Kenya — Female</td>
+                        <td>Peru — Male</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bilingual (ES / EN)</strong></td>
+                        <td class="check">Native ES + EN</td>
+                        <td class="check">Native EN + ES</td>
+                        <td class="check">Native ES + EN</td>
+                        <td>Native EN + Prof. ES</td>
+                        <td>EN (confirm ES)</td>
+                        <td>Native EN</td>
+                        <td class="check">Bilingual EN / ES</td>
+                        <td class="check">Native ES + EN</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EST Time Zone</strong></td>
+                        <td class="check">Mexico — Full EST</td>
+                        <td>Philippines (flexible)</td>
+                        <td class="check">Colombia — Full EST</td>
+                        <td class="check">Saint Lucia — Full EST</td>
+                        <td class="check">Brazil — Full EST</td>
+                        <td>Kenya — Early starts</td>
+                        <td>Kenya — Early starts</td>
+                        <td class="check">Peru — Full EST</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Principal-Level Support</strong></td>
+                        <td class="check">C-Suite confirmed</td>
+                        <td class="check">Senior leadership</td>
+                        <td>Executive teams</td>
+                        <td>Principal-level</td>
+                        <td>Senior management</td>
+                        <td class="check">CEO-direct confirmed</td>
+                        <td>LATAM exec ops</td>
+                        <td>Senior executives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monthly Rate</strong></td>
+                        <td>$2,900</td>
+                        <td class="check">$2,200</td>
+                        <td class="check">$2,500</td>
+                        <td class="check">$2,500</td>
+                        <td class="check">$1,200</td>
+                        <td>$2,800</td>
+                        <td class="check">$2,000</td>
+                        <td class="check">$2,500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <!-- ===== RECRUITING TEAM ===== -->
