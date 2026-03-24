@@ -626,37 +626,84 @@
         /* ===== TABS ===== */
         .tab-nav {
             background: var(--rex-dark);
-            border-bottom: none;
+            border-bottom: 3px solid rgba(1,82,219,0.4);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+            box-shadow: 0 6px 32px rgba(0,0,0,0.4);
         }
         .tab-nav-inner {
             max-width: 1100px;
             margin: 0 auto;
             padding: 0 40px;
             display: flex;
-            gap: 8px;
+            gap: 12px;
             align-items: center;
         }
-        .tab-btn {
-            padding: 14px 32px;
-            border: 2px solid rgba(255,255,255,0.15);
-            background: transparent;
+        .tab-label {
             font-family: 'Poppins', sans-serif;
-            font-size: 13px;
+            font-size: 10px;
             font-weight: 700;
-            color: rgba(255,255,255,0.55);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+            margin-right: 8px;
+        }
+        .tab-btn {
+            padding: 16px 36px;
+            border: 2px solid rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.04);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: rgba(255,255,255,0.5);
             cursor: pointer;
             border-radius: 100px;
-            margin: 10px 0;
-            transition: all 0.2s ease;
-            letter-spacing: 0.6px;
+            margin: 14px 0;
+            transition: all 0.25s ease;
+            letter-spacing: 0.8px;
             text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
-        .tab-btn:hover { color: #fff; border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.07); }
-        .tab-btn.active { color: #fff; background: var(--rex-blue); border-color: var(--rex-blue); box-shadow: 0 4px 16px rgba(1,82,219,0.45); }
+        .tab-btn .tab-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+            font-size: 11px;
+            font-weight: 800;
+            transition: all 0.25s ease;
+        }
+        .tab-btn .tab-new {
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            padding: 2px 7px;
+            border-radius: 100px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #fff;
+        }
+        .tab-btn:hover {
+            color: #fff;
+            border-color: rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.09);
+            transform: translateY(-1px);
+        }
+        .tab-btn.active {
+            color: #fff;
+            background: var(--rex-blue);
+            border-color: var(--rex-blue);
+            box-shadow: 0 6px 24px rgba(1,82,219,0.55);
+            transform: translateY(-1px);
+        }
+        .tab-btn.active .tab-count {
+            background: rgba(255,255,255,0.25);
+        }
         .batch-content { display: none; }
         .batch-content.active { display: block; }
 
@@ -729,8 +776,9 @@
 <!-- ===== TAB NAVIGATION ===== -->
 <nav class="tab-nav">
 <div class="tab-nav-inner">
-<button class="tab-btn active" data-tab="batch1">Batch 1 &middot; Feb 2026</button>
-<button class="tab-btn" data-tab="batch2">Batch 2 &middot; Mar 2026</button>
+<span class="tab-label">Batches</span>
+<button class="tab-btn active" data-tab="batch1">Batch 1 · Feb 2026 <span class="tab-count">9</span></button>
+<button class="tab-btn" data-tab="batch2">Batch 2 · Mar 2026 <span class="tab-count">6</span> <span class="tab-new">NEW</span></button>
 </div>
 </nav>
 
@@ -1771,7 +1819,7 @@ Angela is the <strong>standout profile in this batch</strong>. Fifteen-plus year
 <a class="card-video" href="https://drive.google.com/file/d/1cnfElGdpcR0LObsRNyGwgcg7IOh2hl6Y/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
 Watch Intro Video
-</a><a class="card-resume" href="https://drive.google.com/file/d/1SvwgRnxs_I8AtwI8zwGqPt3_3mgrXQl0/view?usp=sharing" target="_blank" rel="noopener">
+</a><a class="card-resume" href="https://drive.google.com/file/d/1mobgf2Ru0n1syjvTixMYxsCWMiuXinz-/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
 View Resume
 </a>
@@ -1875,7 +1923,7 @@ Santiago is the <strong>AI-native operator</strong> of this batch. Five-plus yea
 <a class="card-video" href="https://drive.google.com/file/d/1vUNPXKtNPr8EgX0hXFYi336873u-L8Fz/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
 Watch Intro Video
-</a><a class="card-resume" href="https://drive.google.com/file/d/1kqhSqPe2r5WbJCDMiTYFInDzxMlF5gAo/view?usp=sharing" target="_blank" rel="noopener">
+</a><a class="card-resume" href="https://drive.google.com/file/d/1YOcU_H45vIxbcbzjlPg7Lmea9r308-Gm/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
 View Resume
 </a>
@@ -2196,7 +2244,7 @@ Ana brings something most EA profiles don't: <strong>20+ years of multinational 
 <a class="card-video" href="https://drive.google.com/file/d/1QVzKvXitO4Syi031yW9pmUky0oEAeZug/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
 Watch Intro Video
-</a><a class="card-resume" href="https://drive.google.com/file/d/1LY-rxor_yY14PvzQNKaqkZuK3a0oejCQ/view?usp=sharing" target="_blank" rel="noopener">
+</a><a class="card-resume" href="https://drive.google.com/file/d/1a1I58YiSRHCII2DKZRzy5aDKVNz0Aud6/view?usp=sharing" target="_blank" rel="noopener">
 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
 View Resume
 </a>
