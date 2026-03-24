@@ -563,6 +563,101 @@
         .footer-logo { font-family: 'Poppins', sans-serif; font-size: 18px; font-weight: 700; color: rgba(255,255,255,0.25); }
         .footer-note { font-size: 12px; color: rgba(255,255,255,0.18); }
 
+        /* ===== TAP INSIGNIA ===== */
+        .tap-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 100px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .tap-badge svg { flex-shrink: 0; }
+        .tap-video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 12px;
+            margin-left: 12px;
+            padding: 8px 18px;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #fff;
+            border-radius: 100px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .tap-video-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* ===== RECRUITER NOTE ===== */
+        .recruiter-note {
+            margin-top: 28px;
+            padding: 18px 22px;
+            background: linear-gradient(135deg, rgba(1, 82, 219, 0.05) 0%, rgba(1, 82, 219, 0.02) 100%);
+            border-left: 3px solid var(--rex-blue);
+            border-radius: 0 10px 10px 0;
+        }
+        .recruiter-note-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--rex-blue);
+            margin-bottom: 8px;
+        }
+        .recruiter-note p {
+            font-size: 13.5px;
+            color: var(--rex-gray-dark);
+            line-height: 1.75;
+            margin: 0;
+        }
+
+        /* ===== TABS ===== */
+        .tab-nav {
+            background: var(--rex-white);
+            border-bottom: 2px solid var(--rex-gray-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .tab-nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            gap: 0;
+        }
+        .tab-btn {
+            padding: 16px 28px;
+            border: none;
+            background: transparent;
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--rex-gray);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all 0.2s ease;
+            letter-spacing: 0.3px;
+        }
+        .tab-btn:hover { color: var(--rex-blue); }
+        .tab-btn.active { color: var(--rex-blue); border-bottom-color: var(--rex-blue); }
+        .batch-content { display: none; }
+        .batch-content.active { display: block; }
+
         /* ===== ANIMATIONS ===== */
         @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -629,6 +724,17 @@
 </div>
 </div>
 </section>
+<!-- ===== TAB NAVIGATION ===== -->
+<nav class="tab-nav">
+<div class="tab-nav-inner">
+<button class="tab-btn active" data-tab="batch1">Batch 1 &middot; Feb 2026</button>
+<button class="tab-btn" data-tab="batch2">Batch 2 &middot; Mar 2026</button>
+</div>
+</nav>
+
+<!-- ===== BATCH 1 ===== -->
+<div id="batch1" class="batch-content active">
+
 <!-- ===== EDITORIAL ===== -->
 <section class="editorial fade-in">
 <div class="section-label">Our Selection Rationale</div>
@@ -1533,6 +1639,758 @@ View Resume
 </table>
 </div>
 </section>
+</div><!-- /batch1 -->
+
+<!-- ===== BATCH 2 ===== -->
+<div id="batch2" class="batch-content">
+
+<!-- ===== EDITORIAL B2 ===== -->
+<section class="editorial fade-in">
+<div class="section-label">Second Batch · Selection Rationale</div>
+<h2>Six More. Stronger on Discretion, Depth, and Operator Experience.</h2>
+<p>
+    The first batch established a strong baseline. This second round goes deeper on candidates with <strong>private-office-grade experience</strong> — people who have operated at the VP level, run executive offices under real pressure, and demonstrated the kind of composure that only comes from being trusted in high-stakes environments. The bar didn't drop. The sourcing got more specific.
+</p>
+<p>
+    We pushed harder on two dimensions this time: <strong>depth of principal-level exposure</strong> and operational range beyond scheduling. Two candidates bring 15+ years each at VP and C-suite proximity. One brings 20+ years in multinational governance and contracts. One is an AI-native EA who has run up to three C-suite leaders simultaneously. One is a former senior tour manager with international logistics experience at a level most EAs never encounter.
+</p>
+<div class="editorial-divider"></div>
+<p style="font-size: 14px; color: var(--rex-gray);">
+<strong style="color: var(--rex-dark);">What made the cut this round:</strong> Candidates who have operated close enough to power that <strong>discretion is non-negotiable, not a preference</strong>. People who have held complexity — professional, logistical, personal — without needing the playbook written for them. Six profiles. All vetted. All worth a conversation.
+</p>
+</section>
+
+<!-- ===== BATCH 2 CANDIDATES ===== -->
+<section class="candidates-section">
+<div class="candidates-header fade-in">
+<div class="section-label">Second Batch · March 23, 2026</div>
+<h2>The Selection</h2>
+<p>Six candidates. All evaluated against what Rex's private office actually demands.</p>
+</div>
+
+<!-- CANDIDATE B2-1: Angela B ★ Top Recommendation -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">AB</div>
+<div>
+<div class="card-name">Angela B <span class="card-name-badge">★ Top Recommendation</span></div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Colombia · Remote · Native Spanish · C2 English · French B2
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$5,000</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Angela is the <strong>standout profile in this batch</strong>. Fifteen-plus years of building and operating executive offices — not supporting them from the side, but running them. She has directed a 50-person nonprofit with a $5M annual budget, currently serves as Executive Partner to a US-based CEO, and has deep experience in recruiting operations, systems implementation, and executive execution. <strong>Colombia-based, bilingual Spanish/English (C2), French B2.</strong> She thinks like a principal. She operates like an operator. At $5,000/month, she's the top of range — and worth it.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Executive Partner to CEO &amp; Operations Lead</div>
+<div class="exp-company">Equi · Remote (US-based)</div>
+<div class="exp-date">Jan 2025 – Present</div>
+<div class="exp-highlight">Strategic thought partner to CEO · Recruiting ops (Juicebox, Ashby) · SOPs + Zapier automation · Sensitive executive communications</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Executive Operations &amp; Client Services Lead</div>
+<div class="exp-company">Hippocratic Financial · Remote (US-based)</div>
+<div class="exp-date">Apr 2023 – Dec 2024</div>
+<div class="exp-highlight">Advisor-client ops platform · Team management · CRM (HubSpot) · Process optimization · SOP design</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Executive Director</div>
+<div class="exp-company">Fundación Salvi · Bogotá, Colombia</div>
+<div class="exp-date">Jun 2015 – Sep 2024</div>
+<div class="exp-highlight">50-person org · $5M annual budget · Board-level liaison · Strategic planning · Cross-functional operations</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Colombia — Female</span>
+<span class="tag dark">Native Spanish · C2 English</span>
+<span class="tag key">Chief of Staff / Exec Partner</span>
+<span class="tag key">Principal-Level Operations</span>
+<span class="tag">SOP Design &amp; Automation</span>
+<span class="tag">Recruiting Operations</span>
+<span class="tag">AI Tools (Claude, ChatGPT)</span>
+<span class="tag">CRM · HubSpot · EOS</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">LATAM Female · Bilingual</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Colombia — Full EST</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$5,000 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">Executive-Level Discretion</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Operational Intelligence</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 97%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Bilingual Communication</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Strategic Anticipation</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1cnfElGdpcR0LObsRNyGwgcg7IOh2hl6Y/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/1SvwgRnxs_I8AtwI8zwGqPt3_3mgrXQl0/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Angela is the top pick in this batch — it's not close. She has actually run organizations, not just supported them. The $5M budget and 50-person team at Fundación Salvi shows she holds accountability at a level most EAs never see. She's currently partnering directly with a US-based CEO on everything from recruiting strategy to executive execution. She's comfortable with AI tools in her daily workflow. Colombia-based, full EST, bilingual C2 English. Start with her video and her resume will close it.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CANDIDATE B2-2: Santiago E -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">SE</div>
+<div>
+<div class="card-name">Santiago E</div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Quito, Ecuador · Remote · Native Spanish · Bilingual English
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$4,500</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Santiago is the <strong>AI-native operator</strong> of this batch. Five-plus years supporting C-suite executives and founders in fast-moving SaaS and AI startups, simultaneously supporting up to three principals at once. He reduced executive workloads by 35% through AI-driven workflows — Notion, Zapier, ChatGPT, Claude, Gemini. Managed 30–60 meetings per week, reduced inbox load by 40%, and has acted as proxy for CEOs in stakeholder meetings. <strong>Ecuador-based, full EST, bilingual.</strong> The kind of EA who builds systems, not just runs them.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Senior Executive Assistant / Chief of Staff</div>
+<div class="exp-company">Confidential · Remote (Global SaaS / AI)</div>
+<div class="exp-date">Mar 2020 – Present</div>
+<div class="exp-highlight">3 C-suite leaders simultaneously · 35% workload reduction via AI workflows · CEO proxy in stakeholder meetings · 100+ recruitment shortlists</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Executive &amp; Administrative Coordinator</div>
+<div class="exp-company">Earlier Roles · Ecuador</div>
+<div class="exp-date">Prior to 2020</div>
+<div class="exp-highlight">Calendar ownership · Travel logistics (40+ multi-city itineraries) · Stakeholder correspondence · KPI tracking</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Ecuador — Male</span>
+<span class="tag dark">Bilingual Spanish / English</span>
+<span class="tag key">AI-Native (Claude, ChatGPT, Gemini)</span>
+<span class="tag key">C-Suite / Founder Support</span>
+<span class="tag">Inbox Zero Methodology</span>
+<span class="tag">Complex Calendar Ownership</span>
+<span class="tag">SOP Development</span>
+<span class="tag">Full-Cycle Recruitment</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">Bilingual · AI-native EA</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Ecuador — Full EST</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$4,500 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">AI-Driven Efficiency</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 97%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Calendar &amp; Inbox Mastery</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">C-Suite Adaptability</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Remote Execution</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1vUNPXKtNPr8EgX0hXFYi336873u-L8Fz/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/1kqhSqPe2r5WbJCDMiTYFInDzxMlF5gAo/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Santiago is the tech-forward pick. He hasn't just worked alongside AI tools — he's built his entire workflow around them and has measurable results to show for it (35% workload reduction, 40% inbox reduction). Running three C-suite executives simultaneously without breaking is a data point most EAs can't match. Ecuador puts him on full EST, and at $4,500/month the value is clear. If Rex wants someone who will actively build systems that make the office more efficient over time, this is the profile.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CANDIDATE B2-3: Daisys T -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">DT</div>
+<div>
+<div class="card-name">Daisys T</div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Managua, Nicaragua · Remote · Native Spanish · C1/C2 English · French
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$4,500</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Daisys brings <strong>15+ years of high-level executive support at the Vice Presidency level</strong> — the kind of discretion and composure that only develops when you sit that close to power. Her background in Psychology sharpens her ability to anticipate executive needs, navigate interpersonal complexity, and defuse friction before it reaches the principal. Bilingual Spanish/English (C1/C2), additional French. Experienced in U.S. real estate operations and <strong>comfortable managing both professional and household/family coordination</strong> — a direct fit for the private office scope Rex needs.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Vice Presidency Office Assistant (Senior Mgmt.)</div>
+<div class="exp-company">C.S.E. · Managua, Nicaragua</div>
+<div class="exp-date">May 2021 – Oct 2025 · 4 yrs 6 mo</div>
+<div class="exp-highlight">Direct support to Vice President · Complex calendar management · Primary communications filter · Strict financial and strategic confidentiality</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Senior Management Assistant</div>
+<div class="exp-company">MINED · Managua, Nicaragua</div>
+<div class="exp-date">Jan 2019 – May 2021</div>
+<div class="exp-highlight">Senior leadership support · Confidential information management · Internal/external meeting coordination</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Administrative Assistant — Renewable Energy</div>
+<div class="exp-company">AGSA · Managua, Nicaragua</div>
+<div class="exp-date">Oct 2010 – Feb 2017 · 6 yrs</div>
+<div class="exp-highlight">Executive administrative operations · Expense reporting · Cross-functional coordination</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Nicaragua — Female</span>
+<span class="tag dark">C1/C2 Bilingual · French</span>
+<span class="tag key">VP-Level Confidential Support</span>
+<span class="tag key">Psychology Background</span>
+<span class="tag">High-Stakes Composure</span>
+<span class="tag">U.S. Real Estate Ops</span>
+<span class="tag">Personal + Professional Coord.</span>
+<span class="tag">Zero Margin for Error</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">LATAM Female · VP-level</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Nicaragua — CST (1hr behind)</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$4,500 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">Confidentiality &amp; Discretion</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 97%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Executive Calendar Management</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Interpersonal Navigation</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 95%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">High-Stakes Composure</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1V7U5QpU-ij81Tqylig7xxp_2gm4uosky/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/11hjRlZhndIcYnd3JWy45omxdOKvaQ6z9/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Daisys is the discretion pick. 15+ years and she's spent most of it at the VP office level — not as a coordinator but as the primary filter between the executive and everything else. Psychology background is a real differentiator: she reads environments, manages interpersonal friction, and protects the principal's time with a precision that comes from training, not just experience. Bilingual C1/C2 English. Experience with personal/household coordination is a direct fit for the private office scope. At $4,500/month this level of confidentiality-proven track record is hard to find.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CANDIDATE B2-4: Fernanda P -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">FP</div>
+<div>
+<div class="card-name">Fernanda P</div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Mexico · Remote · Native Spanish
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$4,500</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Fernanda comes from a world where logistics fail catastrophically or they don't fail at all. As a <strong>senior tour manager for world-class artists</strong> — Ricky Martin, Enrique Iglesias, Los Bukis, Black Eyed Peas, Ana Gabriel, Guns N' Roses — she has orchestrated international travel, visa processing, customs coordination, multi-country ground logistics, and high-pressure budget management at a scale most EAs never encounter. <strong>Mexico-based, native Spanish, full EST-aligned.</strong> The operational edge she brings is real and rare: she doesn't just coordinate, she builds execution frameworks for zero-margin environments.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Senior Tour Manager</div>
+<div class="exp-company">International Artists · Mexico &amp; Global</div>
+<div class="exp-date">Ongoing · 10+ Years</div>
+<div class="exp-highlight">Full international logistics · Visa &amp; customs processing · Multi-country ground ops · Artist/venue/agency coordination · Budget design &amp; execution</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Events &amp; Production Coordinator</div>
+<div class="exp-company">Concert Industry · Latin America, USA, Asia</div>
+<div class="exp-date">Prior Roles</div>
+<div class="exp-highlight">Multi-party stakeholder coordination · Booking agencies, record labels, venues · Production logistics and documentation</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Mexico — Female</span>
+<span class="tag dark">Native Spanish</span>
+<span class="tag key">International Logistics</span>
+<span class="tag key">High-Pressure Execution</span>
+<span class="tag">Visa &amp; Customs Coordination</span>
+<span class="tag">Multi-Party Stakeholder Mgmt</span>
+<span class="tag">Budget Design &amp; Control</span>
+<span class="tag">Zero-Margin Travel Ops</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">LATAM Female · Mexico</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Mexico — CST (1hr behind)</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$4,500 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">International Logistics</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 97%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Multi-Party Coordination</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Budget &amp; Financial Management</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 89%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Problem-Solving Under Pressure</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1_4X_PcU2WExAOgTc51naBGvXRGPyE_ug/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/1x1lEglF_IDdAKTy27Jf7Z7Mz1wUJvmFJ/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Fernanda's background is unconventional for this role — and that's exactly why it's worth a look. Touring with Ricky Martin, Los Bukis, Guns N' Roses, and Black Eyed Peas is not an administrative job. It's high-stakes logistics where the failure mode is international news. She's coordinated international travel, visa clearances, customs handling, multi-country ground operations, and artist-agency-venue relationships at scale. That operational range — executed under genuine pressure — maps directly onto what a private office actually demands when things get complicated. Mexico-based, native Spanish.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CANDIDATE B2-5: Ana F -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">AF</div>
+<div>
+<div class="card-name">Ana F</div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Lima, Peru · Remote · Native Spanish · Advanced English
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$5,000</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Ana brings something most EA profiles don't: <strong>20+ years of multinational operations experience across Mining, Oil &amp; Gas, Civil, and Real Estate environments</strong> — industries where documentation, governance, and confidentiality are non-negotiable. She's a Contracts Professional certified by Bechtel Corporation, Scrum Master certified, PMBOK and Primavera P6 trained. A Bilingual Executive Secretary by formal education. <strong>Peru-based, native Spanish, advanced English.</strong> She doesn't just execute — she builds accountability systems and document control frameworks that hold up under audit.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Operations Coordination &amp; Governance Specialist</div>
+<div class="exp-company">Multinational Firms · Mining, Oil &amp; Gas, Real Estate</div>
+<div class="exp-date">20+ Years · Peru &amp; International</div>
+<div class="exp-highlight">Executive calendar &amp; email management · Document control &amp; auditing · SOP development · ERP/CRM systems · Contracts management</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Contracts Professional (Bechtel Corp. Certified)</div>
+<div class="exp-company">Engineering &amp; Construction · International Scope</div>
+<div class="exp-date">Bechtel Certification 2015</div>
+<div class="exp-highlight">Contracts administration · Compliance · Cross-border governance · Stakeholder coordination</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Peru — Female</span>
+<span class="tag dark">Native Spanish · Adv. English</span>
+<span class="tag key">Governance &amp; Document Control</span>
+<span class="tag key">Contracts Professional (Bechtel)</span>
+<span class="tag">Scrum Master Certified</span>
+<span class="tag">PMBOK · Primavera P6</span>
+<span class="tag">SOP Development</span>
+<span class="tag">ERP/CRM Systems</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">LATAM Female · 20+ yrs</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Peru — Full EST</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$5,000 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">Process &amp; Governance</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 96%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Document Control</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Multinational Coordination</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 94%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Organizational Structure</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1QVzKvXitO4Syi031yW9pmUky0oEAeZug/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/1LY-rxor_yY14PvzQNKaqkZuK3a0oejCQ/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Ana is the governance anchor. 20+ years in environments where documentation errors have legal and financial consequences. Bechtel-certified in contracts. PMBOK-trained. Scrum Master certified. Formally educated as a Bilingual Executive Secretary. She brings the kind of structured, process-oriented discipline that a private office needs when the stakes involve sensitive documents, cross-border coordination, or multi-party compliance. Peru puts her on full EST. At $5,000/month she's the senior end of the range — and the 20+ years across multinational environments justifies it.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CANDIDATE B2-6: Jessica C -->
+<div class="candidate-card fade-in">
+<div class="card">
+<div class="card-top">
+<div class="card-identity">
+<div class="card-avatar">JC</div>
+<div>
+<div class="card-name">Jessica C</div>
+<div class="card-location">
+<svg fill="none" height="13" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="13"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+Lima, Peru · Remote · Native Spanish · Bilingual English
+</div>
+</div>
+</div>
+<div class="card-rate">
+<div class="card-rate-amount">$4,500</div>
+<div class="card-rate-period">USD / Month</div>
+</div>
+</div>
+<div class="card-body">
+<div class="card-narrative">
+Jessica brings <strong>10+ years as a Senior Executive Assistant and Office Manager in multinational environments</strong>. She's currently supporting VP-level executives remotely for US clients through Upwork — handling complex calendars, high-level meetings, travel coordination, budget planning, and project management. Before that, four-plus years as Office Manager at Thales Group, one of the world's largest defense companies, where she oversaw office operations, annual budget planning, regional process standardization, and corporate reporting. <strong>Peru-based, full EST, bilingual.</strong> She's organized, thorough, and comfortable operating at the intersection of business and operational complexity.
+</div>
+<div class="card-section-title">Experience</div>
+<div class="experience-list">
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div><div class="exp-line"></div></div>
+<div class="exp-content">
+<div class="exp-role">Remote VP Executive Assistant</div>
+<div class="exp-company">Upwork · Remote (US clients)</div>
+<div class="exp-date">Sep 2022 – Present</div>
+<div class="exp-highlight">VP &amp; Senior Director support · Complex calendar management · International travel · Expense reporting · Project management (KPI tracking) · AI development team collaboration</div>
+</div>
+</div>
+<div class="exp-item">
+<div class="exp-dot-col"><div class="exp-dot"></div></div>
+<div class="exp-content">
+<div class="exp-role">Office Manager</div>
+<div class="exp-company">Thales Group · Lima, Peru</div>
+<div class="exp-date">Jan 2018 – Aug 2022</div>
+<div class="exp-highlight">Multinational ops oversight · Annual budget planning &amp; cost control · Regional branch coordination · Vendor management (banks, payroll, legal) · Corporate reporting</div>
+</div>
+</div>
+</div>
+<div class="card-section-title">Core Competencies</div>
+<div class="tags">
+<span class="tag dark">Peru — Female</span>
+<span class="tag dark">Bilingual Spanish / English</span>
+<span class="tag key">VP-Level EA · 10+ Years</span>
+<span class="tag key">Multinational Office Management</span>
+<span class="tag">Complex Calendar Ownership</span>
+<span class="tag">International Travel Coordination</span>
+<span class="tag">Budget Planning &amp; Reporting</span>
+<span class="tag">Google Workspace · Asana · Oracle</span>
+</div>
+<div class="card-section-title">Rex Fit Indicators</div>
+<div class="fit-grid">
+<div class="fit-item">
+<div class="fit-label">Profile Match</div>
+<div class="fit-value">LATAM Female · Bilingual</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Time Zone</div>
+<div class="fit-value">Peru — Full EST</div>
+</div>
+<div class="fit-item">
+<div class="fit-label">Rate</div>
+<div class="fit-value">$4,500 / month</div>
+</div>
+</div>
+<div class="card-section-title">Strength Profile</div>
+<div class="strength-grid">
+<div class="strength-item">
+<span class="strength-label">Complex Calendar Management</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 93%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">International Travel Coordination</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 91%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Cross-Functional Project Mgmt</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 90%"></div></div>
+</div>
+<div class="strength-item">
+<span class="strength-label">Budget &amp; Financial Reporting</span>
+<div class="strength-bar-bg"><div class="strength-bar" style="width: 89%"></div></div>
+</div>
+</div>
+<a class="card-video" href="https://drive.google.com/file/d/1NLTrz7qG0PpDRygJnQlVeGrKUa__U0iU/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+Watch Intro Video
+</a><a class="card-resume" href="https://drive.google.com/file/d/1pfYWbljkYWNAqZtYwzKN0VHbIIfwLFXD/view?usp=sharing" target="_blank" rel="noopener">
+<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+View Resume
+</a>
+<div class="recruiter-note">
+<div class="recruiter-note-label">Blake's Note · Rex Fit</div>
+<p>Jessica is the enterprise-trained EA. Thales Group is a global defense and technology company — not a small firm. Managing the Lima office there, with budget accountability, regional coordination, and corporate reporting, built a standard of precision that translates directly. She's now applying that rigor to VP-level executive support for US clients. Peru puts her on full EST. Bilingual. At $4,500/month she's well-positioned and the depth of operational exposure backs it up.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ===== BATCH 2 COMPARISON TABLE ===== -->
+<section class="why-section fade-in">
+<div class="section-label">At a Glance · Batch 2</div>
+<h2>Side-by-Side Comparison</h2>
+<p class="why-intro">All six Batch 2 candidates, benchmarked against what Rex's private office actually requires.</p>
+<div class="table-wrap">
+<table class="comparison-table">
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Angela B ★</th>
+<th>Santiago E</th>
+<th>Daisys T</th>
+<th>Fernanda P</th>
+<th>Ana F</th>
+<th>Jessica C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EA / Ops Experience</strong></td>
+<td class="check">Chief of Staff + Exec Partner</td>
+<td>Senior EA + CoS</td>
+<td>VP Office Senior Asst.</td>
+<td>Sr. Tour Mgr / Logistics</td>
+<td>Ops &amp; Governance Specialist</td>
+<td>Senior EA + Office Mgr</td>
+</tr>
+<tr>
+<td><strong>LATAM / Female</strong></td>
+<td class="check">Colombia — Female</td>
+<td>Ecuador — Male</td>
+<td class="check">Nicaragua — Female</td>
+<td class="check">Mexico — Female</td>
+<td class="check">Peru — Female</td>
+<td class="check">Peru — Female</td>
+</tr>
+<tr>
+<td><strong>Bilingual (ES / EN)</strong></td>
+<td class="check">Native ES + C2 EN</td>
+<td class="check">Native ES + Bilingual EN</td>
+<td class="check">Native ES + C1/C2 EN</td>
+<td>Native ES</td>
+<td class="check">Native ES + Adv. EN</td>
+<td class="check">Native ES + Bilingual EN</td>
+</tr>
+<tr>
+<td><strong>EST Time Zone</strong></td>
+<td class="check">Colombia — Full EST</td>
+<td class="check">Ecuador — Full EST</td>
+<td>Nicaragua — CST</td>
+<td>Mexico — CST</td>
+<td class="check">Peru — Full EST</td>
+<td class="check">Peru — Full EST</td>
+</tr>
+<tr>
+<td><strong>Principal-Level Support</strong></td>
+<td class="check">CEO partner + Exec Director</td>
+<td class="check">3 C-suites simultaneously</td>
+<td class="check">VP Office confirmed</td>
+<td>Exec coordination (logistics)</td>
+<td class="check">Senior leadership (20+ yrs)</td>
+<td>VP-level confirmed</td>
+</tr>
+<tr>
+<td><strong>Monthly Rate</strong></td>
+<td>$5,000</td>
+<td class="check">$4,500</td>
+<td class="check">$4,500</td>
+<td class="check">$4,500</td>
+<td>$5,000</td>
+<td class="check">$4,500</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</div><!-- /batch2 -->
+
 <!-- ===== RECRUITING TEAM ===== -->
 <section class="team-section fade-in">
 <div class="team-inner">
@@ -1627,6 +2485,16 @@ View Resume
         }, { threshold: 0.3 });
 
         document.querySelectorAll('.strength-grid').forEach(el => barObserver.observe(el));
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.batch-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
     </script>
 </body>
 </html>
